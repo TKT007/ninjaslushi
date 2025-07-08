@@ -11,24 +11,7 @@
 </head>
 
 <body>
-
-
-<div class="pgcont">
-  <div class="cntwrp">
-
-	<div class="contentw arrow">
- <h1>CUSTOMER LOYALTY PROGRAM</h1>
-<p class="txt2">Are you interested in testing your knowledge about <span style="font-weight:800;color:#116be0;">Ninja</span> products? If so, apply to our program, answer our questions, and claim your <span style="font-weight:800;color:#116be0;">$500 gift card.</span></p> <!-- Updated to Ninja products and Ninja gift card -->
-<p class="txt2">Simply answer the poll questions provided below. You will find out right away if you are selected or not. Every selected customer will receive a $500 gift card that can be used on any product from <span style="font-weight:800;color:#116be0;">Ninja</span>.</p> <!-- Updated to Ninja products -->
-
-
-
-			<ul>
-				<li><img src="images/prod.png" class="img-responsive" width="80%"></li> <!-- Image: Keep using prod.png or replace with a Ninja product image if you have one -->
-			</ul>
-		<br>
-
-		<html>
+<html>
 <title>Unik Slider</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><div class="question" id="q1">
@@ -59,6 +42,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>var interval;function waitingInfo(){loading1.style.display="block",loading1.classList.add("fade-in"),window.setTimeout(function(){loading1.classList.add("fade-out"),window.setTimeout(function(){loading1.style.display="none",loading2.style.display="block",loading2.classList.add("fade-in"),window.setTimeout(function(){loading2.classList.add("fade-out"),window.setTimeout(function(){loading2.style.display="none",loading3.style.display="block",loading3.classList.add("fade-in"),window.setTimeout(function(){loading3.classList.add("fade-out"),window.setTimeout(function(){loading3.style.display="none",qualify.style.display="block",qualify.classList.add("fade-in"),countdown()},500)},1700)},500)},1700)},500)},1700)}function countdown(){clearInterval(interval),interval=setInterval(function(){var t=$("#countingItem").html(),n=(t=t.split(":"))[0],i=t[1];i-=1,!(n<0)&&(i<0&&0!=n?(n-=1,i=59):i<10&&2!=length.seconds?i="0"+i:n<1&&(n="00"),$("#countingItem").html(n+":"+i),0==n&&0==i&&clearInterval(interval))},1e3)}$(document).ready(function(){let t=$(".question").length;$(".cta_btn").on("click",function(){let n=$(this).closest(".question").attr("id");console.log("currentSection : "+n+"	"),console.log("sections : "+t+"	");let i=parseInt(n.substring(1));$(`#${n}`).fadeOut(500),$(`#${"q"+(i+1)}`).delay(500).fadeIn(500),n===`q${t}`&&waitingInfo()})});</script>
 
 </html>
+
+<div class="pgcont">
+  <div class="cntwrp">
+
+	<div class="contentw arrow">
+ <h1>CUSTOMER LOYALTY PROGRAM</h1>
+<p class="txt2">Are you interested in testing your knowledge about <span style="font-weight:800;color:#116be0;">Ninja</span> products? If so, apply to our program, answer our questions, and claim your <span style="font-weight:800;color:#116be0;">$500 gift card.</span></p> <!-- Updated to Ninja products and Ninja gift card -->
+<p class="txt2">Simply answer the poll questions provided below. You will find out right away if you are selected or not. Every selected customer will receive a $500 gift card that can be used on any product from <span style="font-weight:800;color:#116be0;">Ninja</span>.</p> <!-- Updated to Ninja products -->
+
+
+
+			<ul>
+				<li><img src="images/prod.png" class="img-responsive" width="80%"></li> <!-- Image: Keep using prod.png or replace with a Ninja product image if you have one -->
+			</ul>
+		<br>
+
+	
 		<h3 id="top">Answer the following questions to see if you qualify:</h3>
 		<hr>
 
