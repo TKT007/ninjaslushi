@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	  	<link rel="stylesheet" type="text/css" href="css/style2.css">
 	<title>Ninja Product Review</title> <!-- Updated title to reflect Ninja Products -->
-<script type="text/javascript" src="js/track.js"></script>
 </head>
 
 <body>
@@ -28,62 +27,220 @@
 			</ul>
 		<br>
 		<h3 id="top">Answer the following questions to see if you qualify:</h3>
-		<hr>
+		
 
-	<div class="question">
-		<div class="qask">
-			<p>Question 1/5: Do you live in the USA?</p>
-			<button>Yes</button>
-			<button>No</button>
-		</div>
-		<div class="qask">
-			<p>Question 2/5: How often do you buy products?</p>
-		<button>1-3 times or more per week</button>
-			<button>1-3 times or more per month</button>
-		</div>
+	<!-- Google Fonts: Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-		<div class="qask">
-			<p>Question 3/5: Are you familiar with different brands of kitchen appliances?</p> <!-- Slightly generalized question -->
-			<button>Yes</button>
-			<button>No</button>
-		</div>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 20px;
+  }
 
-		<div class="qask">
-			<p>Question 4/5: Do you have a preferred category of kitchen appliances that you'd like to test and review?</p> <!-- Slightly generalized question -->
-			<button>Yes</button>
-			<button>No</button>
-		</div>
+  .question {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-		<div class="qask">
-			<p>Question 5/5: Are you over 18 years old?</p>
-			<button>Yes</button>
-			<button>No</button>
-		</div>
+  .qask {
+    display: none;
+    margin-bottom: 30px;
+  }
 
-		<div class="loading">
-			<img src="images/ajax-loader.gif" class="img-responsive" width="32" height="32">
-			<p class="loader-txt">We're processing your answers...</p>
-            <ul class="load-txt">
-		        <li><img src="images/checkmark.png" width="24" height="24">Congratulations! You qualify for a chance to get the Gift Card.</li>
-		        <li><img src="images/checkmark.png" width="24" height="24">No duplicate entries found.</li>
-		        <li><img src="images/checkmark.png" width="24" height="24">You're one step closer to earning a bonus. Keep going!</li>
-	        </ul>
-		</div>
+  .qask.active {
+    display: block;
+  }
+
+  .qask p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .qask button {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .qask button:hover {
+    background-color: #0056b3;
+  }
+
+  .loading {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .loading img {
+    margin-bottom: 15px;
+  }
+
+  .loader-txt {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .load-txt {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .load-txt li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .final {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .large_text p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  .steps ol {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+  }
+
+  .steps ol li {
+    margin-bottom: 15px;
+  }
+
+  .button_block {
+    margin-top: 20px;
+  }
+
+  .bb {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .bb:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<div class="question">
+  <div class="qask active">
+    <p>Question 1/5: Do you live in the USA?</p>
+    <button onclick="nextQuestion()">Yes</button>
+    <button onclick="nextQuestion()">No</button>
+  </div>
+
+  <div class="qask">
+    <p>Question 2/5: How often do you buy products?</p>
+    <button onclick="nextQuestion()">1-3 times or more per week</button>
+    <button onclick="nextQuestion()">1-3 times or more per month</button>
+  </div>
+
+  <div class="qask">
+    <p>Question 3/5: Are you familiar with different brands of kitchen appliances?</p>
+    <button onclick="nextQuestion()">Yes</button>
+    <button onclick="nextQuestion()">No</button>
+  </div>
+
+  <div class="qask">
+    <p>Question 4/5: Do you have a preferred category of kitchen appliances that you'd like to test and review?</p>
+    <button onclick="nextQuestion()">Yes</button>
+    <button onclick="nextQuestion()">No</button>
+  </div>
+
+  <div class="qask">
+    <p>Question 5/5: Are you over 18 years old?</p>
+    <button onclick="showLoading()">Yes</button>
+    <button onclick="showLoading()">No</button>
+  </div>
+</div>
+
+<div class="loading">
+  <img src="images/ajax-loader.gif" class="img-responsive" width="32" height="32" alt="Loading spinner">
+  <p class="loader-txt">We're processing your answers...</p>
+  <ul class="load-txt">
+    <li><img src="images/checkmark.png" width="24" height="24">Congratulations! You qualify for a chance to get the Gift Card.</li>
+    <li><img src="images/checkmark.png" width="24" height="24">No duplicate entries found.</li>
+    <li><img src="images/checkmark.png" width="24" height="24">You're one step closer to earning a bonus. Keep going!</li>
+  </ul>
+</div>
 
 <div class="final">
-			<div class="container">
-       <div class="large_text">
-<p>HOW TO CLAIM YOUR GIFT CARD?</p>
+  <div class="container">
+    <div class="large_text">
+      <p>HOW TO CLAIM YOUR GIFT CARD?</p>
+    </div>
+    <div class="steps">
+      <ol>
+        <li>Enter your shipping information. (click on the "Continue" button)</li>
+        <li>Enter your email and basic info for reward delivery.</li>
+        <li>Claim a $500 gift card or <span style="font-weight:800;color:#003c95;">GET TWO $500 GIFT CARDS</span> by completing the recommended deals.</li>
+      </ol>
+      <div class="button_block">
+        <a href="https://info.productsreviewinternational.com/click" class="bb" target="_blank" rel="noopener noreferrer">Continue</a>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="steps">
-<ol>
-<li>Enter your shipping information. (click on the "Continue" button)</li>
-<li>Enter you email and basic info for reward delivery.</li>
-<li>Claim a $500 gift card or <span style="font-weight:800;color:#003c95;">GET TWO $500 GIFT CARDS</span> by completing the recommended deals.</li>
-        </ol>
-        <div class="button_block">
-            <a href="https://info.productsreviewinternational.com/click" class="bb" target="_blank" rel="noopener noreferrer">Continue</a>
-        </div>
+
+<script>
+  let currentQuestion = 0;
+  const questions = document.querySelectorAll(".qask");
+
+  function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+      questions[currentQuestion].classList.remove("active");
+      currentQuestion++;
+      questions[currentQuestion].classList.add("active");
+    }
+  }
+
+  function showLoading() {
+    questions[currentQuestion].classList.remove("active");
+    document.querySelector(".loading").style.display = "block";
+
+    setTimeout(() => {
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector(".final").style.display = "block";
+    }, 2000);
+  }
+</script>
+
 
 		</div></div></div>
 
