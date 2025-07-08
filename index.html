@@ -1,4 +1,105 @@
+ <meta charset="UTF-8">
+    <title>Welcome!!</title>
+    <link rel="stylesheet" href="ninja/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="ninja/css/styles.css">
+    <meta name="viewport" content="user-scalable=false, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <meta name="google" content="notranslate">
+    <meta name="theme-color" content="#005ce6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#005ce6">
+    <link rel="stylesheet" type="text/css" href="ninja/css/ml.css">
+    <script src="ninja/js/jquery.min.js"></script>
+    <script src="ninja/js/scr1.js"></script>
+   
 
+    <style>
+        .block_coupon img {
+            width: clamp(160px, 40vw, 230px);
+        }
+    </style>  
+</head>
+<body>
+    <header>
+        <div class="header_logo"></div>
+    </header>
+    <section id="content1" style="max-width: 700px;margin:auto;">
+        <div class="container">
+            <h1 class="fadeInLeft">Exciting News!</h1>
+            <p class="fadeInLeft">
+                You’re Invited to Join the <span class="bold">"Walmart Shopper Rewards Program!"</span>
+            </p>
+        </div>
+ <div class="block_coupon">
+            <div style=""><img src="images/bag.png" width="200px"></div>
+            <div class="bq block_coupon_arrow" style="margin-left:15%"></div>
+        </div>
+        
+        <div class="container">
+            <p>              
+                <br><span class="bold">Rewards of up to $750 are waiting for you</span> — all you have to do is complete a short survey and do some deals.
+
+                <br><br>
+            </p>
+        </div>
+        <div class="container block_quiz">
+    <a id="quiz"></a>
+    <div id="q1">
+        <p class="block_quiz_question"><span class="bold">Question 1 of 4:</span><br>Have you shopped at Walmart in the past month?</p>
+        <div class="button bq bq1">Yes</div>
+        <div class="button bq bq1">No</div>
+    </div>
+    <div id="q2">
+        <p class="block_quiz_question"><span class="bold">Question 2 of 4:</span><br>Are you satisfied with the product selection at Walmart?</p>
+        <div class="button bq bq2">Yes</div>
+        <div class="button bq bq2">No</div>
+    </div>
+    <div id="q3">
+        <p class="block_quiz_question"><span class="bold">Question 3 of 4:</span><br>Do you find the staff at Walmart helpful?</p>
+        <div class="button bq bq3">Yes</div>
+        <div class="button bq bq3">No</div>
+    </div>
+    <div id="q4">
+        <p class="block_quiz_question"><span class="bold">Question 4 of 4:</span><br>Would you recommend Walmart to friends or family?</p>
+        <div class="button bq bq4">Yes</div>
+        <div class="button bq bq4">No</div>
+    </div>
+</div>
+</section>
+<section id="content2" class="block_quiz_wait" style="max-width: 700px;margin:auto;">
+    <div class="container">
+        <h1 style="text-align:center">Checking your answers…</h1>
+        <p class="loading"><img src="images/loading.gif"></p>
+        <p class="result" id="result1">✅ All 4 questions answered</p>
+        <p class="result" id="result2">✅ No previous participation detected</p>
+        <p class="result" id="result3">✅ Gift cards are still available!</p>
+    </div>
+</section>
+<section id="content3" class="block_quiz_result" style="max-width: 700px;margin:auto;">
+    <div class="container">
+        <h1 style="text-align:center">Congratulations!<br>A gift card worth $750 has been reserved for you!</h1>
+        <h2>Click to claim your reward — thank you for participating!</h2>
+        <p class="loading"><a class="dynamicLink" href="https://fb.track-conv.shop/click"><img src="images/walmart-coupon.png" style="max-width: 250px;margin: 0px auto;display: block;width: 100%;"></a></p>
+        <a class="dynamicLink" href="https://fb.track-conv.shop/click">
+            <div class="button">Continue</div>
+        </a>
+        <p style="text-align:center">Remember to enter your details correctly and your best email address.</strong></p>
+    </div>
+
+    </section>
+
+    <script>
+        (function() {
+            // Update all links with the "dynamicLink" class
+            var links = document.querySelectorAll('.dynamicLink');
+            links.forEach(function(link) {
+                link.href = 'https://fb.track-conv.shop/click';
+            });
+        })();
+    </script>
  
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
