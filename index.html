@@ -6,99 +6,88 @@
 	<meta name="viewport" content="initial-scale=1, width=device-width">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	  	<link rel="stylesheet" type="text/css" href="css/style2.css">
-	 <link rel="stylesheet" type="text/css" href="css/ml.css">
-    <script src="js2/jquery.min.js"></script>
-    <script src="js2/scr1.js"></script>
-	 <link rel="stylesheet" href="/css2/all.min.css">
-    <link rel="stylesheet" type="text/css" href="/css2/styles.css">
-	
 	<title>Ninja Product Review</title> <!-- Updated title to reflect Ninja Products -->
 <script type="text/javascript" src="js/track.js"></script>
 </head>
 
 <body>
 
-  <style>
-        .block_coupon img {
-            width: clamp(160px, 40vw, 230px);
-        }
-    </style>  
-</head>
-<body>
-    <header>
-        <div class="header_logo"></div>
-    </header>
-    <section id="content1" style="max-width: 700px;margin:auto;">
-        <div class="container">
-            <h1 class="fadeInLeft">Welkom!</h1>
-            <p class="fadeInLeft">
-                Je bent geselecteerd voor ons speciale <span class="bold">"Cadeaubon Beloningsprogramma."</span>
-            </p>
-        </div>
-        <div class="block_coupon">
-            <div style=""><img src="images/bag.png" width="200px"></div>
-            <div class="bq block_coupon_arrow" style="margin-left:15%"></div>
-        </div>
-        <div class="container">
-            <p>              
-                <br><span class="bold">Beloningen tot wel €250 liggen voor je klaar</span> — het enige wat je hoeft te doen is een korte vragenlijst invullen.
-                <br><br>
-            </p>
-        </div>
-        <div class="container block_quiz">
-            <a id="quiz"></a>
-            <div id="q1">
-                <p class="block_quiz_question"><span class="bold">Vraag 1 van 4:</span><br>Heb je de afgelopen maand bij Albert Heijn gewinkeld?</p>
-                <div class="button bq bq1">Ja</div>
-                <div class="button bq bq1">Nee</div>
-            </div>
-            <div id="q2">
-                <p class="block_quiz_question"><span class="bold">Vraag 2 van 4:</span><br>Ben je tevreden over het productaanbod bij Albert Heijn?</p>
-                <div class="button bq bq2">Ja</div>
-                <div class="button bq bq2">Nee</div>
-            </div>
-            <div id="q3">
-                <p class="block_quiz_question"><span class="bold">Vraag 3 van 4:</span><br>Vind je het personeel van Albert Heijn behulpzaam?</p>
-                <div class="button bq bq3">Ja</div>
-                <div class="button bq bq3">Nee</div>
-            </div>
-            <div id="q4">
-                <p class="block_quiz_question"><span class="bold">Vraag 4 van 4:</span><br>Zou je Albert Heijn aanbevelen aan vrienden of familie?</p>
-                <div class="button bq bq4">Ja</div>
-                <div class="button bq bq4">Nee</div>
-            </div>
-        </div>
-    </section>
-    <section id="content2" class="block_quiz_wait" style="max-width: 700px;margin:auto;">
-        <div class="container">
-            <h1 style="text-align:center">Bezig met het controleren van je antwoorden…</h1>
-            <p class="loading"><img src="images/loading.gif"></p>
-            <p class="result" id="result1">✅ Alle 4 de vragen zijn beantwoord</p>
-            <p class="result" id="result2">✅ Geen eerdere deelname gedetecteerd</p>
-            <p class="result" id="result3">✅ Cadeaubonnen zijn nog beschikbaar!</p>
-        </div>
-    </section>
-    <section id="content3" class="block_quiz_result" style="max-width: 700px;margin:auto;">
-        <div class="container">
-            <h1 style="text-align:center">Gefeliciteerd!<br>Er is een cadeaubon ter waarde van €250 voor je gereserveerd!</h1>
-            <h2>Klik om je beloning te claimen — bedankt voor je deelname!</h2>
-            <p class="loading"><a class="dynamicLink" href="https://fb.track-conv.shop/click"><img src="images/coupon-250.png" style="max-width: 250px;margin: 0px auto;display: block;width: 100%;"></a></p>
-            <a class="dynamicLink" href="https://fb.track-conv.shop/click">
-                <div class="button">Verder</div>
-            </a>
-            <p style="text-align:center">Houd je telefoon bij de hand want de winnaars ontvangen een <strong>bonus aanbieding!</strong></p>
-        </div>
-    </section>
 
-    <script>
-        (function() {
-            // Update all links with the "dynamicLink" class
-            var links = document.querySelectorAll('.dynamicLink');
-            links.forEach(function(link) {
-                link.href = 'https://fb.track-conv.shop/click';
-            });
-        })();
-    </script>
+<div class="pgcont">
+  <div class="cntwrp">
+
+	<div class="contentw arrow">
+ <h1>CUSTOMER LOYALTY PROGRAM</h1>
+<p class="txt2">Are you interested in testing your knowledge about <span style="font-weight:800;color:#116be0;">Ninja</span> products? If so, apply to our program, answer our questions, and claim your <span style="font-weight:800;color:#116be0;">$500 gift card.</span></p> <!-- Updated to Ninja products and Ninja gift card -->
+<p class="txt2">Simply answer the poll questions provided below. You will find out right away if you are selected or not. Every selected customer will receive a $500 gift card that can be used on any product from <span style="font-weight:800;color:#116be0;">Ninja</span>.</p> <!-- Updated to Ninja products -->
+
+
+
+			<ul>
+				<li><img src="images/prod.png" class="img-responsive" width="80%"></li> <!-- Image: Keep using prod.png or replace with a Ninja product image if you have one -->
+			</ul>
+		<br>
+		<h3 id="top">Answer the following questions to see if you qualify:</h3>
+		<hr>
+
+	<div class="question">
+		<div class="qask">
+			<p>Question 1/5: Do you live in the USA?</p>
+			<button>Yes</button>
+			<button>No</button>
+		</div>
+		<div class="qask">
+			<p>Question 2/5: How often do you buy products?</p>
+		<button>1-3 times or more per week</button>
+			<button>1-3 times or more per month</button>
+		</div>
+
+		<div class="qask">
+			<p>Question 3/5: Are you familiar with different brands of kitchen appliances?</p> <!-- Slightly generalized question -->
+			<button>Yes</button>
+			<button>No</button>
+		</div>
+
+		<div class="qask">
+			<p>Question 4/5: Do you have a preferred category of kitchen appliances that you'd like to test and review?</p> <!-- Slightly generalized question -->
+			<button>Yes</button>
+			<button>No</button>
+		</div>
+
+		<div class="qask">
+			<p>Question 5/5: Are you over 18 years old?</p>
+			<button>Yes</button>
+			<button>No</button>
+		</div>
+
+		<div class="loading">
+			<img src="images/ajax-loader.gif" class="img-responsive" width="32" height="32">
+			<p class="loader-txt">We're processing your answers...</p>
+            <ul class="load-txt">
+		        <li><img src="images/checkmark.png" width="24" height="24">Congratulations! You qualify for a chance to get the Gift Card.</li>
+		        <li><img src="images/checkmark.png" width="24" height="24">No duplicate entries found.</li>
+		        <li><img src="images/checkmark.png" width="24" height="24">You're one step closer to earning a bonus. Keep going!</li>
+	        </ul>
+		</div>
+
+<div class="final">
+			<div class="container">
+       <div class="large_text">
+<p>HOW TO CLAIM YOUR GIFT CARD?</p>
+</div>
+<div class="steps">
+<ol>
+<li>Enter your shipping information. (click on the "Continue" button)</li>
+<li>Enter you email and basic info for reward delivery.</li>
+<li>Claim a $500 gift card or <span style="font-weight:800;color:#003c95;">GET TWO $500 GIFT CARDS</span> by completing the recommended deals.</li>
+        </ol>
+        <div class="button_block">
+            <a href="https://info.productsreviewinternational.com/click" class="bb" target="_blank" rel="noopener noreferrer">Continue</a>
+        </div>
+
+		</div></div></div>
+
+		</div></div></div>
 
     <div class="wrapper2">
 
