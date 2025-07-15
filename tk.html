@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your Ninja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f0f0f0, #dcdcdc);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            color: #1a1a1a;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+            max-width: 420px;
+            width: 100%;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .main-display-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .reward-progress p {
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .progress-bar-container {
+            background-color: #e6e6e6;
+            border-radius: 5px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background-color: #4d4d4d;
+            width: 33%;
+            height: 100%;
+        }
+
+        .instructions-header {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin: 25px 0 20px;
+            color: #1a1a1a;
+        }
+
+        .quick-start-guide {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .quick-start-guide h3 {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .quick-start-guide ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .quick-start-guide li {
+            display: flex;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .quick-start-guide .icon {
+            background-color: #333333;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            font-size: 0.8em;
+        }
+
+        .text-main {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .text-sub {
+            font-size: 0.85em;
+            color: #555555;
+        }
+
+        .start-earning-btn {
+            display: block;
+            background: linear-gradient(to right, #444444, #666666);
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-decoration: none;
+            margin: 0 auto 20px;
+            transition: background 0.2s;
+        }
+
+        .start-earning-btn:hover {
+            background: linear-gradient(to right, #666666, #444444);
+        }
+
+        .footer-text {
+            font-size: 0.8em;
+            color: #777777;
+            text-align: center;
+        }
+
+        .footer-text .lock-icon {
+            font-size: 1em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=1497" target="_blank">
+            <img src="/Ninja Slushi/images/Ninja Slushi.png" alt="Ninja Slushi Reward" class="main-display-image">
+        </a>
+        <div class="reward-progress">
+            <p>Reward Progress</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="instructions-header">Follow the steps below to claim your Ninja Reward!</div>
+        <div class="quick-start-guide">
+            <h3>Quick Start Guide →</h3>
+            <ul>
+                <li>
+                    <span class="icon">✓</span>
+                    <div>
+                        <span class="text-main">Click the button below</span><br>
+                        <span class="text-sub">You'll be taken to a quick signup page</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">✓</span>
+                    <div>
+                        <span class="text-main">Enter basic information & email</span><br>
+                        <span class="text-sub">Used to send your Ninja reward</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">✓</span>
+                    <div>
+                        <span class="text-main">Complete recommended offers</span><br>
+                        <span class="text-sub">This step is required to validate your reward eligibility</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="https://rewarrdsgiant.com/aff_c?offer_id=2701&aff_id=1497" class="start-earning-btn" onclick="fbq('track', 'InitiateCheckout')">CLAIM YOUR NINJA REWARD</a>
+        <div class="footer-text">
+            <span class="lock-icon">🛡️</span> Secure & Confidential
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("a").forEach(e => {
+                const href = e.getAttribute("href");
+                if (href && !href.includes("#")) {
+                    e.setAttribute("href", href.includes("?")
+                        ? href + window.location.search.replace("?", "&")
+                        : href + window.location.search
+                    );
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
